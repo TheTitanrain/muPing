@@ -31,8 +31,8 @@ def ping_servers(servers):
     """Ping all servers in the list."""
     for server in servers:
         ping_server(server)
-
-    return results
+    # return sorted dictionary by ping
+    return sorted(results, key=lambda x: x[1])
 
 
 if __name__ == "__main__":
